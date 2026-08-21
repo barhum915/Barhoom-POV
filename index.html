@@ -193,4 +193,1107 @@ footer p{color:var(--muted); line-height:1.9; font-size:.95rem;}
 .modal h3{font-family:'Amiri',serif; color:var(--gold-2); font-size:1.5rem; margin-bottom:22px;}
 .modal-close{position:absolute; top:20px; left:20px; width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,.06); color:var(--sand); font-size:1.2rem; display:flex; align-items:center; justify-content:center; z-index:5;}
 .field{margin-bottom:18px;}
-.field label{display:block; margin-
+.field label{display:block; margin-bottom:8px; font-size:.88rem; color:var(--muted);}
+.field input, .field select, .field textarea{width:100%; padding:13px 16px; background:var(--ink-3); border:1px solid var(--line); border-radius:10px; color:var(--sand); font-family:inherit; font-size:.95rem; transition:border-color .3s ease;}
+.field input:focus, .field select:focus, .field textarea:focus{outline:none; border-color:var(--gold);}
+.field textarea{resize:vertical; min-height:70px;}
+.field input[type=file]{padding:10px;}
+.modal .btn{width:100%; justify-content:center; margin-top:8px;}
+.hint{font-size:.8rem; color:var(--muted); margin-top:6px; line-height:1.6;}
+.pick-list{display:flex; flex-direction:column; gap:10px; margin-bottom:20px; max-height:280px; overflow-y:auto;}
+.pick-item{display:flex; justify-content:space-between; align-items:center; padding:14px 16px; background:var(--ink-3); border:1px solid var(--line); border-radius:10px; cursor:pointer; transition:all .25s ease;}
+.pick-item:hover, .pick-item.selected{border-color:var(--gold); background:rgba(198,161,91,.08);}
+.pick-item .pt{font-weight:700; color:var(--sand); font-size:.95rem;}
+.pick-item .pp{color:var(--gold-2); font-weight:800; font-size:.95rem;}
+.pay-toggle{display:flex; gap:10px; margin-bottom:18px;}
+.pay-toggle button{flex:1; padding:14px; border-radius:10px; background:var(--ink-3); border:1px solid var(--line); color:var(--muted); font-weight:700;}
+.pay-toggle button.active{background:var(--gold); color:var(--ink); border-color:var(--gold);}
+.barcode-box{text-align:center; background:var(--ink-3); border:1px dashed var(--gold); border-radius:14px; padding:20px; margin-bottom:18px;}
+.barcode-box img{max-width:220px; margin:0 auto 12px; border-radius:8px;}
+.info-box{background:var(--ink-3); border:1px solid var(--line); border-radius:14px; padding:24px; margin-bottom:20px;}
+.info-box h4{font-family:'Amiri',serif; color:var(--gold-2); font-size:1.3rem; margin-bottom:12px;}
+.info-box p{color:var(--sand); line-height:1.9; font-size:.95rem; margin-bottom:16px;}
+.info-box ul{list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:16px;}
+.info-box ul li{display:flex; align-items:flex-start; gap:10px; color:var(--sand); font-size:.92rem; line-height:1.7;}
+.info-box ul li::before{content:'✦'; color:var(--gold); flex-shrink:0;}
+.info-box .info-price{color:var(--gold-2); font-weight:800; font-size:1.3rem; border-top:1px solid var(--line); padding-top:14px; margin-top:4px;}
+.info-box .info-price small{display:block; color:var(--muted); font-weight:500; font-size:.8rem; margin-top:4px;}
+.summary-box{background:var(--ink-3); border:1px solid var(--line); border-radius:12px; padding:18px; margin-bottom:20px;}
+.summary-box .row{display:flex; justify-content:space-between; margin-bottom:8px; font-size:.92rem; color:var(--sand);}
+.summary-box .row.total{border-top:1px solid var(--line); padding-top:10px; font-weight:800; color:var(--gold-2);}
+.admin-panel .item-row{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:14px 16px; background:var(--ink-3); border-radius:10px; margin-bottom:10px; border:1px solid var(--line); flex-wrap:wrap;}
+.admin-panel .item-row .meta{overflow:hidden;}
+.admin-panel .item-row .meta strong{display:block; color:var(--sand); font-size:.92rem;}
+.admin-panel .item-row .meta span{color:var(--muted); font-size:.78rem;}
+.admin-panel .del-btn{color:var(--bad); background:rgba(224,72,58,.1); border-radius:8px; padding:8px 12px; font-size:.8rem; font-weight:700; flex-shrink:0;}
+.tab-row{display:flex; gap:8px; margin-bottom:24px; flex-wrap:wrap;}
+.tab-btn{padding:9px 16px; border-radius:10px; background:var(--ink-3); color:var(--muted); font-weight:700; font-size:.82rem; border:1px solid var(--line);}
+.tab-btn.active{background:var(--gold); color:var(--ink); border-color:var(--gold);}
+.tab-pane{display:none;}
+.tab-pane.active{display:block;}
+.inline-grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+.order-card{background:var(--ink-3); border:1px solid var(--line); border-radius:14px; padding:18px; margin-bottom:14px;}
+.order-card .oh{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; gap:10px;}
+.order-card h4{font-family:'Amiri',serif; color:var(--gold-2); font-size:1.1rem;}
+.order-card .od{color:var(--muted); font-size:.85rem; line-height:1.9;}
+.status-pill{padding:5px 14px; border-radius:20px; font-size:.75rem; font-weight:800; white-space:nowrap;}
+.status-pending{background:rgba(198,161,91,.15); color:var(--wait);}
+.status-confirmed{background:rgba(79,174,106,.15); color:var(--ok);}
+.status-rejected{background:rgba(224,72,58,.15); color:var(--bad);}
+.status-actions{display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;}
+.status-actions button{padding:8px 14px; border-radius:8px; font-size:.78rem; font-weight:700; border:1px solid var(--line); background:var(--ink-2); color:var(--muted);}
+.status-actions button.active{border-color:var(--gold); color:var(--gold-2); background:rgba(198,161,91,.1);}
+.receipt-link{display:inline-block; margin-top:8px; color:var(--gold-2); font-size:.82rem; text-decoration:underline;}
+.toast{position:fixed; bottom:30px; left:50%; transform:translateX(-50%) translateY(20px); background:var(--gold); color:var(--ink); padding:14px 26px; border-radius:30px; font-weight:700; z-index:300; opacity:0; transition:all .4s cubic-bezier(.16,1,.3,1); pointer-events:none; max-width:90vw; text-align:center;}
+.toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+.spinner{width:18px; height:18px; border:2px solid rgba(255,255,255,.3); border-top-color:var(--ink); border-radius:50%; animation:spin 0.7s linear infinite; display:inline-block;}
+@keyframes spin{to{transform:rotate(360deg);}}
+@media (max-width:860px){
+  .nav-links, .nav-cta{display:none;} .burger{display:flex;}
+  .glasses-grid{grid-template-columns:1fr;} .foot-grid{flex-direction:column;} .section{padding:80px 0;}
+  .inline-grid2{grid-template-columns:1fr;}
+}
+.mobile-menu{position:fixed; top:0; left:0; right:0; background:var(--ink-2); border-bottom:1px solid var(--line); z-index:99; padding:100px 30px 30px; transform:translateY(-110%); transition:transform .5s cubic-bezier(.16,1,.3,1); display:flex; flex-direction:column; gap:22px;}
+.mobile-menu.open{transform:translateY(0);}
+.mobile-menu a{font-size:1.2rem; color:var(--sand);}
+</style>
+</head>
+<body>
+
+<div id="particles"></div>
+
+<header id="siteHeader">
+  <div class="container nav-inner">
+    <div class="brand" id="brandNav">
+      <svg class="compass" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="46" stroke="#c6a15b" stroke-width="2"/>
+        <circle cx="50" cy="50" r="3" fill="#e8c77e"/>
+        <path d="M50 12 L58 50 L50 88 L42 50 Z" fill="#c6a15b"/>
+      </svg>
+      <span id="brandNavText">BKKARI POV</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#services">التصوير</a>
+      <a href="#rentals">استئجار النظارة</a>
+      <a href="#packages">الباقات</a>
+      <a href="#glasses">نظارة التصوير</a>
+      <a href="#gallery">الأعمال</a>
+      <a href="#booking">تواصل</a>
+    </nav>
+    <a href="#packages" class="nav-cta">احجز الآن</a>
+    <button class="burger" id="burgerBtn" aria-label="القائمة"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services">التصوير</a>
+  <a href="#rentals">استئجار النظارة</a>
+  <a href="#packages">الباقات</a>
+  <a href="#glasses">نظارة التصوير</a>
+  <a href="#gallery">الأعمال</a>
+  <a href="#packages" class="btn btn-gold" style="justify-content:center;">احجز الآن</a>
+</div>
+
+<section class="hero">
+  <div class="hero-media">
+    <video id="heroVideo" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=1600&auto=format&fit=crop">
+      <source src="https://cdn.coverr.co/videos/coverr-zip-lining-in-the-forest-2633/1080p.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="container hero-content">
+    <div class="hero-kicker"><span class="rope"></span> تصوير رحلات ومغامرات • نظارة POV احترافية</div>
+    <h1 id="heroTitle">خلّي لحظاتك <span class="glow">ذكرى ما بتنتسى</span> 📸</h1>
+    <p class="lead" id="heroSubtitle">تصوير احترافي للرحلات والمغامرات — صور مميزة وفيديوهات POV من نظارات التصوير.</p>
+    <div class="hero-actions">
+      <a href="#packages" class="btn btn-gold">احجز تصويرك الآن</a>
+      <a href="#gallery" class="btn btn-ghost">شاهد أعمالي</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><div class="stick"></div></div>
+</section>
+
+<div class="horizon" data-horizon><svg viewBox="0 0 1200 90" preserveAspectRatio="none"><circle class="sun" cx="600" cy="46" r="10"/><path d="M0,55 C150,20 300,75 450,45 C600,15 750,70 900,40 C1050,15 1150,55 1200,45" /></svg></div>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="eyebrow reveal">التصوير الفوتوغرافي</div>
+    <h2 class="section-title reveal">باقات <span class="accent">التصوير</span> 📸</h2>
+    <p class="section-sub reveal">أسعار واضحة لكل احتياج — بالليرة القديمة، الجديدة، والدولار.</p>
+    <div class="price-grid stagger" id="servicesGrid"></div>
+    <div class="includes reveal">
+      <h3>الخدمة بتشمل</h3>
+      <div class="include-item"><span class="dot"></span><p>أفكار بوز إبداعية تناسبك</p></div>
+      <div class="include-item"><span class="dot"></span><p>اختيار أفضل موقع للتصوير</p></div>
+      <div class="include-item"><span class="dot"></span><p>ضبط إعدادات الكاميرا والموبايل</p></div>
+      <div class="include-item"><span class="dot"></span><p>زوايا تصوير مختلفة ومدروسة</p></div>
+      <div class="include-item"><span class="dot"></span><p>اختيار أفضل اللقطات من الجلسة</p></div>
+      <div class="include-item"><span class="dot"></span><p>تعديل وتحرير احترافي للصور</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="horizon" data-horizon><svg viewBox="0 0 1200 90" preserveAspectRatio="none"><circle class="sun" cx="600" cy="46" r="10"/><path d="M0,55 C150,20 300,75 450,45 C600,15 750,70 900,40 C1050,15 1150,55 1200,45" /></svg></div>
+
+<section class="section" id="rentals" style="background:var(--ink-2);">
+  <div class="container">
+    <div class="eyebrow reveal">استئجار نظارة Ray-Ban Meta</div>
+    <h2 class="section-title reveal">صوّر <span class="accent">مناسبتك</span> بمنظورك 🕶️</h2>
+    <p class="section-sub reveal">مش بس للمغامرات — استأجر نظارة التصوير لأي مناسبة: أعراس، ركوب خيل، دراجة نارية، وغيرها.</p>
+    <div class="price-grid stagger" id="rentalsGrid"></div>
+  </div>
+</section>
+
+<section class="section" id="packages">
+  <div class="container">
+    <div class="eyebrow reveal">اختر باقتك واحجز مباشرة</div>
+    <h2 class="section-title reveal">باقات <span class="accent">مميزة</span> ⭐</h2>
+    <p class="section-sub reveal">اختر الباقة، وبعدها اختر طريقة الدفع المناسبة إلك.</p>
+    <div class="pkg-grid" id="packagesGrid"></div>
+  </div>
+</section>
+
+<section class="glasses-section" id="glasses">
+  <div class="container glasses-grid">
+    <div class="glasses-visual reveal-scale">
+      <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?q=80&w=1000&auto=format&fit=crop" alt="نظارة تصوير">
+      <div class="frame-glow"></div>
+      <div class="pov-tag"><span class="rec-dot"></span> POV REC</div>
+    </div>
+    <div>
+      <div class="eyebrow reveal">تقنية حصرية</div>
+      <h2 class="section-title reveal">شوف مغامرتك من <span class="accent">منظور مختلف</span> 🥽</h2>
+      <p class="section-sub reveal" style="margin-bottom:0;">نظارة التصوير بتلتقط أدق تفاصيل المغامرة بمنظور شخصي (POV)، وكأنك عايش اللحظة من جديد.</p>
+      <ul class="glasses-feats">
+        <li class="reveal"><span class="ic">🎬</span><span>فيديو POV بمنظور الشخص الأول</span></li>
+        <li class="reveal"><span class="ic">🌊</span><span>تجربة غامرة وواقعية بالكامل</span></li>
+        <li class="reveal"><span class="ic">🪂</span><span>مثالية لكل أنواع أنشطة المغامرة</span></li>
+        <li class="reveal"><span class="ic">🎞️</span><span>لقطات مختلفة عن التصوير التقليدي</span></li>
+        <li class="reveal"><span class="ic">📍</span><span>توثيق اللحظة أثناء مشاركة المصور بالنشاط نفسه</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="eyebrow reveal">معرض الأعمال</div>
+    <h2 class="section-title reveal">لحظات <span class="accent">موثّقة</span> 🎬</h2>
+    <p class="section-sub reveal">مجموعة من فيديوهات POV، والرحلات — يتم تحديثها باستمرار.</p>
+    <div class="filters" id="filterBar"></div>
+    <div class="gallery" id="galleryGrid"></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--ink-2);">
+  <div class="container">
+    <div class="eyebrow reveal">ليش تختار BKKARI POV؟</div>
+    <h2 class="section-title reveal">خبرة <span class="accent">تصنع الفرق</span></h2>
+    <div class="why-grid stagger">
+      <div class="why-card reveal" style="--i:0"><span class="ic">📸</span><h4>تصوير إبداعي</h4><p>بوزات وزوايا تصوير مميزة تناسب شخصيتك ومغامرتك.</p></div>
+      <div class="why-card reveal" style="--i:1"><span class="ic">🎥</span><h4>فيديوهات POV مغامرة</h4><p>عيش المغامرة من منظور الشخص الأول بلحظة بلحظة.</p></div>
+      <div class="why-card reveal" style="--i:2"><span class="ic">✨</span><h4>تعديل احترافي</h4><p>انتقاء دقيق وتحرير عالي الجودة لكل صورة.</p></div>
+      <div class="why-card reveal" style="--i:3"><span class="ic">🏔️</span><h4>خبرة بكل أنواع المغامرات</h4><p>تصوير مصمم خصيصًا لمختلف الرحلات والأنشطة الخارجية.</p></div>
+      <div class="why-card reveal" style="--i:4"><span class="ic">⚡</span><h4>تسليم سريع</h4><p>استلام الصور والفيديوهات النهائية بأسرع وقت.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="container">
+    <div class="eyebrow reveal" style="justify-content:center;">لا تفوّت اللحظة</div>
+    <h2 class="reveal">جاهز توثّق مغامرتك؟ 📸</h2>
+    <p class="reveal">احجز تصويرك مع BKKARI POV الآن</p>
+    <div class="phone-display reveal" id="phoneDisplay">📞 0936426605</div>
+    <div class="booking-actions reveal">
+      <a href="#packages" class="btn btn-gold big-cta"><span class="shine"></span>اختر باقتك 📲</a>
+    </div>
+    <div class="social-row reveal" id="socialRow"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div style="max-width:340px;">
+        <div class="foot-brand" id="footBrand">BKKARI POV <span>— Travel &amp; Adventure Photography 📸</span></div>
+        <p>تصوير رحلات • مغامرات • صور • فيديوهات POV</p>
+        <div class="foot-social" id="footSocial"></div>
+      </div>
+      <div>
+        <div class="foot-brand" style="font-size:1.1rem;">روابط سريعة</div>
+        <p><a href="#services">التصوير</a></p>
+        <p><a href="#packages">الباقات</a></p>
+        <p><a href="#gallery">الأعمال</a></p>
+      </div>
+      <div>
+        <div class="foot-brand" style="font-size:1.1rem;">للحجز والاستفسار</div>
+        <p id="footPhone" style="direction:ltr; text-align:right; color:var(--gold-2); font-weight:700; font-size:1.1rem;">0936426605</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 BKKARI POV — جميع الحقوق محفوظة</span>
+      <button class="admin-link" id="openAdminBtn">لوحة التحكم ⚙️ <span id="orderBadge" style="display:none; background:var(--bad); color:#fff; border-radius:20px; padding:2px 8px; font-size:.72rem; margin-right:4px;"></span></button>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="wa-float" id="waFloat" aria-label="واتساب">
+  <svg viewBox="0 0 32 32" fill="#060a10"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.1 1.3 1.3-4-.2-.4c-1-1.7-1.6-3.6-1.6-5.5 0-5.9 4.9-10.7 11-10.7s10.9 4.8 10.9 10.7S22.1 25.7 16 25.7zm5.8-8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2s-.8 1.1-1 1.3-.4.2-.7.1c-.3-.2-1.3-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<!-- DETAIL MODAL -->
+<div class="modal-backdrop" id="detailModal">
+  <div class="modal">
+    <button class="modal-close" data-close="detailModal">✕</button>
+    <h3 id="detailTitle"></h3>
+    <p class="hint" id="detailDesc" style="margin-bottom:20px; line-height:1.9; font-size:.95rem; color:var(--sand);"></p>
+    <div class="summary-box" id="detailPriceBox"></div>
+    <button class="btn btn-gold" id="detailBookBtn">احجز الآن ✦</button>
+  </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-backdrop" id="checkoutModal">
+  <div class="modal wide">
+    <button class="modal-close" data-close="checkoutModal">✕</button>
+    <h3 id="checkoutTitle">إتمام الحجز 📸</h3>
+
+    <div id="ckStepPick">
+      <p class="hint" style="margin-bottom:14px;">اختر الخدمة أو الباقة يلي بدك ياها:</p>
+      <div class="pick-list" id="ckPickList"></div>
+    </div>
+
+    <div id="ckStepInfo" style="display:none;">
+      <div class="info-box" id="ckInfoBox"></div>
+      <button class="btn btn-gold" id="ckContinueBtn">متابعة الحجز ✦</button>
+      <button class="btn btn-ghost" id="ckInfoBackBtn" style="margin-top:10px;">رجوع للاختيار</button>
+    </div>
+
+    <div id="ckStepDetails" style="display:none;">
+      <div class="summary-box" id="ckSummary"></div>
+      <div class="field"><label>الاسم الكامل</label><input type="text" id="ckName" placeholder="مثال: أحمد محمد"></div>
+      <div class="field"><label>رقم الهاتف</label><input type="tel" id="ckPhone" placeholder="09XXXXXXXX"></div>
+      <label class="hint" style="display:block; margin-bottom:10px;">طريقة الدفع</label>
+      <div class="pay-toggle">
+        <button type="button" id="payShamBtn">شام كاش 💳</button>
+        <button type="button" id="payCashBtn">تسليم باليد 🤝</button>
+      </div>
+
+      <div id="shamFields" style="display:none;">
+        <div class="barcode-box">
+          <img id="shamBarcodeImg" src="" alt="باركود شام كاش" style="display:none;">
+          <p class="hint" id="shamNumberText">رقم شام كاش: —</p>
+        </div>
+        <div class="field"><label>رقم إشعار التحويل</label><input type="text" id="ckTransferRef" placeholder="رقم العملية / الإشعار"></div>
+        <div class="field"><label>صورة إشعار التحويل</label><input type="file" id="ckReceiptFile" accept="image/*"></div>
+      </div>
+
+      <button class="btn btn-gold" id="ckSubmitBtn">تأكيد الطلب ✦</button>
+      <button class="btn btn-ghost" id="ckBackBtn" style="margin-top:10px;">رجوع للاختيار</button>
+    </div>
+
+    <div id="ckStepDone" style="display:none; text-align:center; padding:20px 0;">
+      <div style="font-size:3rem; margin-bottom:14px;">✅</div>
+      <h3>تم استلام طلبك!</h3>
+      <p class="hint" style="margin-bottom:20px;">اضغط الزر تحت لإرسال إشعار فوري بطلبك عبر واتساب — هيك بنوصلك أسرع.</p>
+      <a class="btn btn-gold" id="ckNotifyWaBtn" target="_blank" style="margin-bottom:10px;">📲 إرسال إشعار الطلب عبر واتساب</a>
+      <button class="btn btn-ghost" data-close="checkoutModal">تمام</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN LOGIN -->
+<div class="modal-backdrop" id="adminLoginModal">
+  <div class="modal">
+    <button class="modal-close" data-close="adminLoginModal">✕</button>
+    <h3>دخول لوحة التحكم 🔒</h3>
+    <div class="field">
+      <label>كلمة المرور</label>
+      <input type="password" id="adminPassInput" placeholder="••••••••">
+      <p class="hint">كلمة المرور الافتراضية: bkkari2026 — عدّلها من الكود بمتغير CONFIG.adminPassword.</p>
+    </div>
+    <button class="btn btn-gold" id="adminLoginBtn">دخول</button>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="modal-backdrop" id="adminPanelModal">
+  <div class="modal admin-panel wide">
+    <button class="modal-close" data-close="adminPanelModal">✕</button>
+    <h3>لوحة تحكم BKKARI POV 🎛️</h3>
+    <div class="tab-row">
+      <button class="tab-btn active" data-tab="general">عام</button>
+      <button class="tab-btn" data-tab="services">الأسعار</button>
+      <button class="tab-btn" data-tab="packages">الباقات</button>
+      <button class="tab-btn" data-tab="activities">الاستئجار</button>
+      <button class="tab-btn" data-tab="gallery">المعرض</button>
+      <button class="tab-btn" data-tab="orders">الطلبات</button>
+    </div>
+
+    <!-- GENERAL -->
+    <div class="tab-pane active" id="tab-general">
+      <div class="field"><label>اسم البراند</label><input type="text" id="setBrand"></div>
+      <div class="field"><label>عنوان الهيرو</label><input type="text" id="setHeroTitle"></div>
+      <div class="field"><label>وصف الهيرو</label><textarea id="setHeroSub"></textarea></div>
+      <div class="inline-grid2">
+        <div class="field"><label>رقم الهاتف</label><input type="text" id="setPhone"></div>
+        <div class="field"><label>رقم واتساب (بدون + أو 00)</label><input type="text" id="setWhatsapp"></div>
+      </div>
+      <div class="inline-grid2">
+        <div class="field"><label>رابط انستغرام</label><input type="text" id="setInstagram"></div>
+        <div class="field"><label>رابط فيسبوك</label><input type="text" id="setFacebook"></div>
+      </div>
+      <div class="field"><label>رقم شام كاش</label><input type="text" id="setShamNumber"></div>
+      <div class="field"><label>صورة باركود شام كاش</label><input type="file" id="setShamBarcodeFile" accept="image/*"><p class="hint" id="shamCurrentHint"></p></div>
+      <button class="btn btn-gold" id="saveGeneralBtn">حفظ الإعدادات ✦</button>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="tab-pane" id="tab-services">
+      <div id="servicesAdminList"></div>
+      <div class="inline-grid2" style="margin-top:16px;">
+        <div class="field"><label>اسم الخدمة</label><input type="text" id="newServiceTitle" placeholder="مثال: 20 صورة"></div>
+        <div class="field"><label>السعر (ل.س.ق)</label><input type="number" id="newServicePrice" placeholder="120000"></div>
+      </div>
+      <button class="btn btn-gold" id="addServiceBtn">إضافة خدمة ✦</button>
+    </div>
+
+    <!-- PACKAGES -->
+    <div class="tab-pane" id="tab-packages">
+      <div id="packagesAdminList"></div>
+      <div class="field"><label>اسم الباقة</label><input type="text" id="newPkgTitle"></div>
+      <div class="inline-grid2">
+        <div class="field"><label>السعر (ل.س.ق)</label><input type="number" id="newPkgPrice"></div>
+        <div class="field"><label>الأكثر طلبًا؟</label><select id="newPkgBadge"><option value="0">لا</option><option value="1">نعم</option></select></div>
+      </div>
+      <div class="field"><label>المزايا (كل سطر ميزة)</label><textarea id="newPkgFeatures" placeholder="فيديو Zipline POV كامل
+5 صور احترافية"></textarea></div>
+      <button class="btn btn-gold" id="addPkgBtn">إضافة باقة ✦</button>
+    </div>
+
+    <!-- ACTIVITIES -->
+    <div class="tab-pane" id="tab-activities">
+      <h4 style="font-family:'Amiri',serif; color:var(--gold-2); margin-bottom:14px;">استئجار النظارة للمناسبات</h4>
+      <div id="rentalsAdminList"></div>
+      <div class="inline-grid2">
+        <div class="field"><label>اسم المناسبة</label><input type="text" id="newRentalTitle" placeholder="مثال: حفلة تخرج"></div>
+        <div class="field"><label>إيموجي/رمز</label><input type="text" id="newRentalIcon" placeholder="🎓"></div>
+      </div>
+      <div class="inline-grid2">
+        <div class="field"><label>السعر (ل.س.ق)</label><input type="number" id="newRentalPrice" placeholder="30000"></div>
+        <div class="field"><label>وصف قصير</label><input type="text" id="newRentalDesc" placeholder="وصف الخدمة"></div>
+      </div>
+      <button class="btn btn-gold" id="addRentalBtn">إضافة خيار استئجار ✦</button>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="tab-pane" id="tab-gallery">
+      <div class="field"><label>عنوان العمل</label><input type="text" id="itemTitle"></div>
+      <div class="inline-grid2">
+        <div class="field"><label>التصنيف</label><input type="text" id="itemCategory" placeholder="مثال: زيب لاين، مناسبات، رحلات"></div>
+        <div class="field"><label>نوع الوسائط</label><select id="itemType"><option value="image">صورة</option><option value="video">فيديو</option></select></div>
+      </div>
+      <div class="field"><label>ارفع الملف من جهازك مباشرة</label><input type="file" id="itemFile" accept="image/*,video/*"></div>
+      <div class="hint" id="uploadProgress"></div>
+      <button class="btn btn-gold" id="addItemBtn">رفع وإضافة للمعرض ✦</button>
+      <div style="margin-top:26px;"><div id="manageList"></div></div>
+    </div>
+
+    <!-- ORDERS -->
+    <div class="tab-pane" id="tab-orders">
+      <div id="ordersList"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ================= CONFIG ================= */
+const CONFIG = {
+  supabaseUrl: "https://ttjwvpeufvubevgdiyej.supabase.co",
+  supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR0and2cGV1ZnZ1YmV2Z2RpeWVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcxODIwODAsImV4cCI6MjEwMjc1ODA4MH0.d0FqZ0h2KeroY1UsirtjihCL-rNr7Uu-G6pyt46T_bg",
+  adminPassword: "bkkari2026",
+  bucketPhotos: "photos",
+  bucketVideos: "videos",
+  bucketReceipts: "receipts"
+};
+const sb = window.supabase.createClient(CONFIG.supabaseUrl, CONFIG.supabaseKey);
+
+const ICONS = {
+  whatsapp: `<svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.1 1.3 1.3-4-.2-.4c-1-1.7-1.6-3.6-1.6-5.5 0-5.9 4.9-10.7 11-10.7s10.9 4.8 10.9 10.7S22.1 25.7 16 25.7zm5.8-8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2s-.8 1.1-1 1.3-.4.2-.7.1c-.3-.2-1.3-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>`,
+  instagram: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>`,
+  facebook: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.1a10 10 0 1 0-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6v1.9h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12.1z"/></svg>`
+};
+
+const DEFAULT_SETTINGS = {
+  brand: "BKKARI POV",
+  heroTitle: 'خلّي لحظاتك <span class="glow">ذكرى ما بتنتسى</span> 📸',
+  heroSub: "تصوير احترافي للرحلات والمغامرات — صور مميزة وفيديوهات POV من نظارات التصوير.",
+  phone: "0936426605",
+  whatsapp: "963936426605",
+  instagram: "https://www.instagram.com/ibrahimbkkari?igsh=dmd0Zm85c2VkcXB2",
+  facebook: "https://www.facebook.com/share/19EdZhv1U6/",
+  shamNumber: "",
+  shamBarcodeUrl: "",
+  services: [
+    {id:'s1', title:'صورة واحدة', price:10000, desc:'لقطة واحدة مُنتقاة بعناية — بوز مدروس، أفضل زاوية، وتعديل احترافي كامل.'},
+    {id:'s2', title:'5 صور', price:40000, desc:'5 صور احترافية من مواقع وزوايا مختلفة خلال نفس الجلسة، مع تعديل كامل لكل صورة.'},
+    {id:'s3', title:'10 صور', price:70000, desc:'10 صور متنوعة توثّق رحلتك من أكثر من زاوية وموقع، مع تعديل احترافي.'},
+    {id:'s4', title:'15 صورة', price:95000, desc:'تغطية موسّعة بـ 15 صورة لأكثر من لحظة ومكان خلال المغامرة.'},
+    {id:'s5', title:'تصوير كامل', price:100000, desc:'تغطية كاملة للرحلة من البداية للنهاية — أكبر عدد ممكن من اللقطات وأفضل انتقاء.'},
+    {id:'s6', title:'فيديو POV', price:30000, desc:'فيديو مصوّر بنظارة Ray-Ban Meta بمنظور الشخص الأول (POV) بجودة تصل حتى 4K — إحساس حقيقي إنك عايش اللحظة من جديد.'},
+    {id:'s7', title:'فيديو + 3 صور', price:50000, desc:'فيديو POV كامل بنظارة Ray-Ban Meta بجودة تصل حتى 4K، مع 3 صور احترافية موثّقة من نفس المغامرة.'}
+  ],
+  packages: [
+    {id:'p1', title:'باقة المغامر', price:60000, badge:true, desc:'الخيار الأشمل لمعظم المغامرات — فيديو POV بنظارة Ray-Ban Meta بجودة 4K مع مجموعة صور احترافية.', features:['فيديو POV بنظارة Ray-Ban Meta (حتى 4K)','5 صور احترافية مُنتقاة','أفكار بوز إبداعية','تعديل وتحرير للصور']},
+    {id:'p2', title:'الباقة الكاملة', price:90000, badge:false, desc:'تغطية متكاملة بأكبر عدد من الصور مع فيديو POV كامل الجودة لتوثيق كل تفاصيل مغامرتك.', features:['فيديو POV بنظارة Ray-Ban Meta (حتى 4K)','10 صور احترافية','بوزات ومواقع متعددة','تحرير احترافي للصور']}
+  ],
+  rentals: [
+    {id:'r1', title:'مناسبات وأعراس', icon:'💍', price:40000, desc:'استئجار نظارة Ray-Ban Meta لتوثيق فرحتك أو مناسبتك بمنظور POV حصري طول الحفلة.'},
+    {id:'r2', title:'ركوب الخيل', icon:'🐎', price:25000, desc:'عيش تجربة ركوب الخيل وسجّلها بمنظورك الخاص عبر نظارة التصوير.'},
+    {id:'r3', title:'ركوب الدراجة النارية', icon:'🏍️', price:25000, desc:'وثّق جولتك بالموتور من منظور أول شخص بجودة عالية ووضوح كامل.'}
+  ]
+};
+
+let settings = JSON.parse(JSON.stringify(DEFAULT_SETTINGS));
+let portfolio = [];
+let orders = [];
+let exchangeRate = null;
+let activeFilter = 'all';
+let isAdmin = false;
+let ckSelected = null;
+let ckPayMethod = null;
+
+/* ================= HELPERS ================= */
+function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2800); }
+function openModal(id){ document.getElementById(id).classList.add('open'); }
+function closeModal(id){ document.getElementById(id).classList.remove('open'); }
+function fmt(n){ return Number(n).toLocaleString('en-US'); }
+function priceLines(oldPrice){
+  const newSyp = Math.round(oldPrice/100);
+  const usd = exchangeRate ? (oldPrice/exchangeRate) : null;
+  return { oldPrice, newSyp, usd };
+}
+function priceHtml(oldPrice){
+  const p = priceLines(oldPrice);
+  return `<div class="amount">${fmt(p.newSyp)} <span>ل.س.ج</span></div>
+    <div class="price-sub">${fmt(p.oldPrice)} ل.س.ق${p.usd? ' · $'+p.usd.toFixed(2):''}</div>`;
+}
+function priceSummary(oldPrice){
+  const p = priceLines(oldPrice);
+  return `${fmt(p.newSyp)} ل.س.ج (${fmt(p.oldPrice)} ل.س.ق${p.usd? ' · $'+p.usd.toFixed(2):''})`;
+}
+
+/* ================= EXCHANGE RATE ================= */
+async function fetchRate(){
+  try{
+    const cached = await window.storage.get('exchangeRate', true).catch(()=>null);
+    if(cached && cached.value){
+      const parsed = JSON.parse(cached.value);
+      if(Date.now()-parsed.ts < 6*3600*1000){ exchangeRate = parsed.rate; return; }
+    }
+  }catch(e){}
+  try{
+    const res = await fetch('https://lirascope.syria-cloud.sy/api/v1/rates/latest?currencies=USD&lang=ar');
+    const j = await res.json();
+    const rate = (j.marketRates && j.marketRates[0] && j.marketRates[0].mid) || (j.effectiveRates && j.effectiveRates[0] && j.effectiveRates[0].mid) || (j.cbsRates && j.cbsRates[0] && j.cbsRates[0].mid);
+    if(rate){
+      exchangeRate = rate;
+      window.storage.set('exchangeRate', JSON.stringify({rate, ts:Date.now()}), true).catch(()=>{});
+    }
+  }catch(e){ console.error('rate fetch failed', e); }
+}
+
+/* ================= SETTINGS ================= */
+async function loadSettings(){
+  try{
+    const { data, error } = await sb.from('settings').select('data').eq('id',1).single();
+    if(data && data.data && Object.keys(data.data).length){
+      settings = Object.assign({}, DEFAULT_SETTINGS, data.data);
+    } else {
+      await sb.from('settings').update({data: DEFAULT_SETTINGS}).eq('id',1);
+    }
+  }catch(e){ console.error('settings load failed', e); }
+}
+async function saveSettings(){
+  try{ await sb.from('settings').update({data: settings}).eq('id',1); }
+  catch(e){ toast('تعذّر الحفظ — تحقق من الاتصال'); console.error(e); }
+}
+
+/* ================= RENDER: HERO / BRAND / CONTACT ================= */
+function renderBrandAndContact(){
+  document.getElementById('brandNavText').textContent = settings.brand;
+  document.title = settings.brand + ' — تصوير الرحلات والمغامرات';
+  document.getElementById('heroTitle').innerHTML = settings.heroTitle;
+  document.getElementById('heroSubtitle').textContent = settings.heroSub;
+  document.getElementById('phoneDisplay').textContent = '📞 ' + settings.phone;
+  document.getElementById('footPhone').textContent = settings.phone;
+  document.getElementById('footBrand').innerHTML = settings.brand + ' <span>— Travel &amp; Adventure Photography 📸</span>';
+
+  const waLink = `https://wa.me/${settings.whatsapp}?text=${encodeURIComponent('مرحبا، حابب احجز جلسة تصوير 📸')}`;
+  document.getElementById('waFloat').href = waLink;
+
+  const socials = [
+    {url: waLink, label:'واتساب', icon: ICONS.whatsapp},
+    {url: settings.instagram, label:'انستغرام', icon: ICONS.instagram},
+    {url: settings.facebook, label:'فيسبوك', icon: ICONS.facebook}
+  ].filter(s=>s.url);
+
+  const socialHtml = socials.map(s=>`<a href="${s.url}" target="_blank" rel="noopener" aria-label="${s.label}">${s.icon}</a>`).join('');
+  document.getElementById('socialRow').innerHTML = socialHtml;
+  document.getElementById('footSocial').innerHTML = socialHtml;
+}
+
+/* ================= RENDER: SERVICES / PACKAGES / ACTIVITIES ================= */
+function renderServices(){
+  const grid = document.getElementById('servicesGrid');
+  grid.innerHTML = settings.services.map((s,i)=>`
+    <div class="price-card reveal" style="--i:${i}">
+      <div class="num">0${i+1}</div>
+      <div style="font-family:'Amiri',serif; color:var(--sand); font-size:1.05rem;">${s.title}</div>
+      ${priceHtml(s.price)}
+      <button class="btn btn-gold btn-sm" data-book-service="${s.id}">التفاصيل</button>
+    </div>`).join('');
+  grid.querySelectorAll('[data-book-service]').forEach(btn=>{
+    btn.addEventListener('click', ()=> openDetail('service', btn.dataset.bookService));
+  });
+  observeReveals();
+}
+function renderRentals(){
+  const grid = document.getElementById('rentalsGrid');
+  if(!grid) return;
+  const rentals = settings.rentals || [];
+  grid.innerHTML = rentals.map((r,i)=>`
+    <div class="price-card reveal" style="--i:${i}">
+      <div class="num">${r.icon||'🕶️'}</div>
+      <div style="font-family:'Amiri',serif; color:var(--sand); font-size:1.05rem;">${r.title}</div>
+      ${priceHtml(r.price)}
+      <button class="btn btn-gold btn-sm" data-book-rental="${r.id}">التفاصيل</button>
+    </div>`).join('');
+  grid.querySelectorAll('[data-book-rental]').forEach(btn=>{
+    btn.addEventListener('click', ()=> openDetail('rental', btn.dataset.bookRental));
+  });
+  observeReveals();
+}
+function renderPackages(){
+  const grid = document.getElementById('packagesGrid');
+  grid.innerHTML = settings.packages.map(p=>`
+    <div class="pkg-card ${p.badge?'featured':''} reveal-scale">
+      ${p.badge?'<span class="badge">🔥 الأكثر طلبًا</span>':''}
+      <div class="inner">
+        <span class="pkg-icon">${p.badge?'⭐':'👑'}</span>
+        <h3>${p.title}</h3>
+        <div class="pkg-price">${fmt(priceLines(p.price).newSyp)} <span>ل.س.ج</span></div>
+        <div class="price-sub">${fmt(p.price)} ل.س.ق${exchangeRate?' · $'+(p.price/exchangeRate).toFixed(2):''}</div>
+        <ul class="pkg-list">${p.features.map(f=>`<li>${f}</li>`).join('')}</ul>
+        <button class="btn ${p.badge?'btn-gold':'btn-ghost'}" data-book-pkg="${p.id}">احجز هذه الباقة</button>
+      </div>
+    </div>`).join('');
+  grid.querySelectorAll('[data-book-pkg]').forEach(btn=>{
+    btn.addEventListener('click', ()=> startCheckout('package', btn.dataset.bookPkg));
+  });
+  observeReveals();
+}
+
+/* ================= GALLERY ================= */
+async function loadPortfolio(){
+  try{
+    const { data } = await sb.from('portfolio').select('*').order('created_at',{ascending:false});
+    portfolio = data || [];
+  }catch(e){ portfolio = []; }
+  renderFilters(); renderGallery();
+}
+function renderFilters(){
+  const cats = ['all', ...new Set(portfolio.map(p=>p.category))];
+  const bar = document.getElementById('filterBar');
+  bar.innerHTML = cats.map(c=>`<button class="filter-btn ${c===activeFilter?'active':''}" data-filter="${c}">${c==='all'?'الكل':c}</button>`).join('');
+  bar.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{ activeFilter = btn.dataset.filter; renderFilters(); renderGallery(); });
+  });
+}
+function renderGallery(){
+  const grid = document.getElementById('galleryGrid');
+  const items = activeFilter==='all' ? portfolio : portfolio.filter(p=>p.category===activeFilter);
+  if(!items.length){ grid.innerHTML = `<div class="gallery-empty">ما في أعمال بهاد التصنيف بعد.</div>`; return; }
+  grid.innerHTML = items.map(it=>{
+    if(it.type==='video'){
+      return `<a class="g-card is-video" href="${it.media_url}" target="_blank" rel="noopener">
+        <video src="${it.media_url}" muted loop playsinline poster="${it.thumb_url||''}"></video>
+        <div class="g-play">▶</div>
+        <div class="g-overlay"><div class="g-cat">${it.category}</div><div class="g-title">${it.title}</div></div>
+      </a>`;
+    }
+    return `<a class="g-card" href="${it.media_url}" target="_blank" rel="noopener">
+      <img src="${it.media_url}" alt="${it.title}" loading="lazy">
+      <div class="g-overlay"><div class="g-cat">${it.category}</div><div class="g-title">${it.title}</div></div>
+    </a>`;
+  }).join('');
+  const vids = grid.querySelectorAll('video');
+  vids.forEach(v=>{ v.addEventListener('mouseenter', ()=>v.play()); v.addEventListener('mouseleave', ()=>{v.pause(); v.currentTime=0;}); });
+  observeReveals();
+}
+
+/* ================= SCROLL / UI ================= */
+function observeReveals(){
+  const els = document.querySelectorAll('.reveal:not(.in), .reveal-scale:not(.in)');
+  const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); }, {threshold:.15});
+  els.forEach(el=>io.observe(el));
+}
+function observeHorizons(){
+  const hs = document.querySelectorAll('[data-horizon]');
+  const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('drawn'); io.unobserve(e.target);} }); }, {threshold:.4});
+  hs.forEach(h=>io.observe(h));
+}
+function spawnParticles(){
+  const wrap = document.getElementById('particles');
+  for(let i=0;i<32;i++){
+    const d = document.createElement('div'); d.className='dust';
+    d.style.left = Math.random()*100+'vw'; d.style.bottom='-10px';
+    d.style.animationDuration=(10+Math.random()*14)+'s'; d.style.animationDelay=(Math.random()*14)+'s';
+    d.style.width = d.style.height = (1.5+Math.random()*2.5)+'px';
+    wrap.appendChild(d);
+  }
+}
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', ()=>{ header.classList.toggle('scrolled', window.scrollY>40); }, {passive:true});
+const burger = document.getElementById('burgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+burger.addEventListener('click', ()=> mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>mobileMenu.classList.remove('open')));
+document.querySelectorAll('[data-close]').forEach(btn=> btn.addEventListener('click', ()=> closeModal(btn.dataset.close)));
+document.querySelectorAll('.modal-backdrop').forEach(bd=> bd.addEventListener('click', (e)=>{ if(e.target===bd) bd.classList.remove('open'); }));
+
+/* ================= CHECKOUT FLOW ================= */
+function findItem(kind, id){
+  if(kind==='service') return settings.services.find(s=>s.id===id);
+  if(kind==='package') return settings.packages.find(p=>p.id===id);
+  if(kind==='rental') return settings.rentals.find(r=>r.id===id);
+}
+function allCheckoutItems(){
+  return [
+    ...settings.services.map(s=>({...s, kind:'service'})),
+    ...settings.packages.map(p=>({...p, kind:'package'})),
+    ...(settings.rentals||[]).map(r=>({...r, kind:'rental'}))
+  ];
+}
+let detailSelected = null;
+function openDetail(kind, id){
+  const item = findItem(kind, id);
+  if(!item) return;
+  detailSelected = {kind, id};
+  document.getElementById('detailTitle').textContent = item.title;
+  document.getElementById('detailDesc').textContent = item.desc || '';
+  document.getElementById('detailPriceBox').innerHTML = `<div class="row total"><span>السعر</span><span>${priceSummary(item.price)}</span></div>`;
+  openModal('detailModal');
+}
+document.getElementById('detailBookBtn').addEventListener('click', ()=>{
+  closeModal('detailModal');
+  if(detailSelected) startCheckout(detailSelected.kind, detailSelected.id);
+});
+function hideAllCkSteps(){
+  ['ckStepPick','ckStepInfo','ckStepDetails','ckStepDone'].forEach(id=> document.getElementById(id).style.display='none');
+}
+function startCheckout(kind, id){
+  const item = findItem(kind, id);
+  if(!item) return;
+  ckSelected = {...item, kind};
+  openModal('checkoutModal');
+  showCkInfo();
+}
+function renderCkPickList(){
+  const list = document.getElementById('ckPickList');
+  const items = allCheckoutItems();
+  list.innerHTML = items.map(it=>`
+    <div class="pick-item" data-pick="${it.kind}:${it.id}">
+      <span class="pt">${it.title}</span>
+      <span class="pp">${fmt(priceLines(it.price).newSyp)} ل.س.ج</span>
+    </div>`).join('');
+  list.querySelectorAll('[data-pick]').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      const [kind,id] = el.dataset.pick.split(':');
+      ckSelected = {...findItem(kind,id), kind};
+      showCkInfo();
+    });
+  });
+}
+function showCkInfo(){
+  hideAllCkSteps();
+  document.getElementById('ckStepInfo').style.display='block';
+  const p = priceLines(ckSelected.price);
+  const featuresHtml = ckSelected.features && ckSelected.features.length ? `<ul>${ckSelected.features.map(f=>`<li>${f}</li>`).join('')}</ul>` : '';
+  document.getElementById('ckInfoBox').innerHTML = `
+    <h4>${ckSelected.title}</h4>
+    ${ckSelected.desc ? `<p>${ckSelected.desc}</p>` : ''}
+    ${featuresHtml}
+    <div class="info-price">${fmt(p.newSyp)} ل.س.ج
+      <small>${fmt(p.oldPrice)} ل.س.ق${p.usd? ' · $'+p.usd.toFixed(2):''}</small>
+    </div>`;
+}
+document.getElementById('ckInfoBackBtn').addEventListener('click', ()=>{
+  hideAllCkSteps();
+  document.getElementById('ckStepPick').style.display='block';
+  renderCkPickList();
+});
+document.getElementById('ckContinueBtn').addEventListener('click', ()=> showCkDetails());
+function showCkDetails(){
+  hideAllCkSteps();
+  document.getElementById('ckStepDetails').style.display='block';
+  document.getElementById('ckSummary').innerHTML = `
+    <div class="row"><span>${ckSelected.title}</span><span>${fmt(priceLines(ckSelected.price).newSyp)} ل.س.ج</span></div>
+    <div class="row total"><span>الإجمالي</span><span>${priceSummary(ckSelected.price)}</span></div>`;
+  ckPayMethod = null;
+  document.getElementById('payShamBtn').classList.remove('active');
+  document.getElementById('payCashBtn').classList.remove('active');
+  document.getElementById('shamFields').style.display='none';
+}
+document.getElementById('ckBackBtn').addEventListener('click', ()=> showCkInfo());
+document.getElementById('payShamBtn').addEventListener('click', ()=>{
+  ckPayMethod='sham';
+  document.getElementById('payShamBtn').classList.add('active');
+  document.getElementById('payCashBtn').classList.remove('active');
+  document.getElementById('shamFields').style.display='block';
+  const img = document.getElementById('shamBarcodeImg');
+  if(settings.shamBarcodeUrl){ img.src=settings.shamBarcodeUrl; img.style.display='block'; } else { img.style.display='none'; }
+  document.getElementById('shamNumberText').textContent = 'رقم شام كاش: ' + (settings.shamNumber || '—');
+});
+document.getElementById('payCashBtn').addEventListener('click', ()=>{
+  ckPayMethod='cash';
+  document.getElementById('payCashBtn').classList.add('active');
+  document.getElementById('payShamBtn').classList.remove('active');
+  document.getElementById('shamFields').style.display='none';
+});
+
+document.getElementById('ckSubmitBtn').addEventListener('click', async ()=>{
+  const name = document.getElementById('ckName').value.trim();
+  const phone = document.getElementById('ckPhone').value.trim();
+  if(!name || !phone){ toast('عبّي الاسم ورقم الهاتف'); return; }
+  if(!ckPayMethod){ toast('اختر طريقة الدفع'); return; }
+  let transferRef = null, receiptUrl = null;
+  const btn = document.getElementById('ckSubmitBtn');
+  const originalText = btn.textContent;
+  if(ckPayMethod==='sham'){
+    transferRef = document.getElementById('ckTransferRef').value.trim();
+    const file = document.getElementById('ckReceiptFile').files[0];
+    if(!transferRef){ toast('حط رقم إشعار التحويل'); return; }
+    if(file){
+      btn.innerHTML = '<span class="spinner"></span> جاري الرفع...'; btn.disabled=true;
+      try{
+        const path = `${Date.now()}_${file.name.replace(/\s+/g,'_')}`;
+        const { error: upErr } = await sb.storage.from(CONFIG.bucketReceipts).upload(path, file);
+        if(upErr) throw upErr;
+        const { data: pub } = sb.storage.from(CONFIG.bucketReceipts).getPublicUrl(path);
+        receiptUrl = pub.publicUrl;
+      }catch(e){ toast('تعذّر رفع صورة الإشعار'); btn.textContent=originalText; btn.disabled=false; return; }
+    }
+  }
+  const p = priceLines(ckSelected.price);
+  const order = {
+    package_name: ckSelected.title,
+    price_syp_new: p.newSyp,
+    price_usd: p.usd ? Number(p.usd.toFixed(2)) : null,
+    payment_method: ckPayMethod==='sham' ? 'شام كاش' : 'تسليم باليد',
+    transfer_ref: transferRef,
+    receipt_url: receiptUrl,
+    customer_name: name,
+    customer_phone: phone,
+    status: 'pending'
+  };
+  try{
+    btn.innerHTML = '<span class="spinner"></span> جاري الإرسال...'; btn.disabled=true;
+    const { error } = await sb.from('orders').insert(order);
+    if(error) throw error;
+    const msg = `طلب جديد 📸\nالخدمة: ${order.package_name}\nالسعر: ${fmt(order.price_syp_new)} ل.س.ج${order.price_usd?' ($'+order.price_usd+')':''}\nالدفع: ${order.payment_method}${order.transfer_ref?'\nمرجع التحويل: '+order.transfer_ref:''}\nالاسم: ${order.customer_name}\nالهاتف: ${order.customer_phone}`;
+    document.getElementById('ckNotifyWaBtn').href = `https://wa.me/${settings.whatsapp}?text=${encodeURIComponent(msg)}`;
+    document.getElementById('ckStepDetails').style.display='none';
+    document.getElementById('ckStepDone').style.display='block';
+  }catch(e){ toast('تعذّر إرسال الطلب — حاول مرة ثانية'); console.error(e); }
+  finally{ btn.textContent=originalText; btn.disabled=false; }
+});
+document.getElementById('checkoutModal').addEventListener('click', (e)=>{
+  if(e.target.id==='checkoutModal'){ hideAllCkSteps(); document.getElementById('ckStepPick').style.display='block'; }
+});
+document.querySelector('[data-close="checkoutModal"]').addEventListener('click', ()=>{
+  hideAllCkSteps(); document.getElementById('ckStepPick').style.display='block';
+});
+
+/* ================= ADMIN ================= */
+document.getElementById('openAdminBtn').addEventListener('click', ()=>{
+  if(isAdmin){ openModal('adminPanelModal'); refreshAdminAll(); }
+  else openModal('adminLoginModal');
+});
+document.getElementById('adminLoginBtn').addEventListener('click', ()=>{
+  const val = document.getElementById('adminPassInput').value;
+  if(val === CONFIG.adminPassword){
+    isAdmin = true; closeModal('adminLoginModal'); openModal('adminPanelModal'); refreshAdminAll();
+    enableAdminNotifications();
+  } else { toast('كلمة المرور غير صحيحة'); }
+});
+document.querySelectorAll('#adminPanelModal .tab-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#adminPanelModal .tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('#adminPanelModal .tab-pane').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+    if(btn.dataset.tab==='orders'){ loadOrders(); newOrderCount=0; updateOrderBadge(); }
+  });
+});
+let newOrderCount = 0;
+let notifSubscribed = false;
+function updateOrderBadge(){
+  const b = document.getElementById('orderBadge');
+  if(newOrderCount>0){ b.style.display='inline'; b.textContent=newOrderCount; } else { b.style.display='none'; }
+}
+function playBeep(){
+  try{
+    const ctx = new (window.AudioContext||window.webkitAudioContext)();
+    const o = ctx.createOscillator(); const g = ctx.createGain();
+    o.connect(g); g.connect(ctx.destination);
+    o.frequency.value = 880; g.gain.value = 0.15;
+    o.start(); setTimeout(()=>{ o.stop(); ctx.close(); }, 220);
+  }catch(e){}
+}
+function enableAdminNotifications(){
+  if(notifSubscribed) return;
+  notifSubscribed = true;
+  if('Notification' in window && Notification.permission==='default'){ Notification.requestPermission(); }
+  sb.channel('orders-watch')
+    .on('postgres_changes', {event:'INSERT', schema:'public', table:'orders'}, (payload)=>{
+      newOrderCount++; updateOrderBadge(); playBeep();
+      toast('🔔 وصل طلب جديد: ' + (payload.new.package_name||''));
+      if('Notification' in window && Notification.permission==='granted'){
+        new Notification('طلب جديد 📸', {body: `${payload.new.customer_name||''} — ${payload.new.package_name||''}`});
+      }
+      if(document.getElementById('tab-orders').classList.contains('active')) loadOrders();
+    })
+    .subscribe();
+}
+function refreshAdminAll(){
+  fillGeneralForm(); renderServicesAdmin(); renderPackagesAdmin(); renderRentalsAdmin(); renderManageList();
+}
+function fillGeneralForm(){
+  document.getElementById('setBrand').value = settings.brand;
+  document.getElementById('setHeroTitle').value = settings.heroTitle.replace(/<[^>]+>/g,'');
+  document.getElementById('setHeroSub').value = settings.heroSub;
+  document.getElementById('setPhone').value = settings.phone;
+  document.getElementById('setWhatsapp').value = settings.whatsapp;
+  document.getElementById('setInstagram').value = settings.instagram;
+  document.getElementById('setFacebook').value = settings.facebook;
+  document.getElementById('setShamNumber').value = settings.shamNumber;
+  document.getElementById('shamCurrentHint').textContent = settings.shamBarcodeUrl ? 'في صورة باركود محفوظة حاليًا — ارفع صورة جديدة لتغييرها.' : 'ما في صورة باركود محفوظة بعد.';
+}
+document.getElementById('saveGeneralBtn').addEventListener('click', async ()=>{
+  const btn = document.getElementById('saveGeneralBtn'); const orig = btn.textContent;
+  btn.innerHTML = '<span class="spinner"></span> جاري الحفظ...'; btn.disabled = true;
+  settings.brand = document.getElementById('setBrand').value.trim() || settings.brand;
+  settings.heroTitle = document.getElementById('setHeroTitle').value.trim();
+  settings.heroSub = document.getElementById('setHeroSub').value.trim();
+  settings.phone = document.getElementById('setPhone').value.trim();
+  settings.whatsapp = document.getElementById('setWhatsapp').value.trim();
+  settings.instagram = document.getElementById('setInstagram').value.trim();
+  settings.facebook = document.getElementById('setFacebook').value.trim();
+  settings.shamNumber = document.getElementById('setShamNumber').value.trim();
+  const file = document.getElementById('setShamBarcodeFile').files[0];
+  try{
+    if(file){
+      const path = `barcode_${Date.now()}_${file.name.replace(/\s+/g,'_')}`;
+      const { error: upErr } = await sb.storage.from(CONFIG.bucketPhotos).upload(path, file);
+      if(upErr) throw upErr;
+      const { data: pub } = sb.storage.from(CONFIG.bucketPhotos).getPublicUrl(path);
+      settings.shamBarcodeUrl = pub.publicUrl;
+    }
+    await saveSettings();
+    renderBrandAndContact(); renderServices(); renderPackages();
+    toast('تم حفظ الإعدادات ✦');
+  }catch(e){ toast('صار خطأ بالحفظ'); console.error(e); }
+  finally{ btn.textContent = orig; btn.disabled = false; }
+});
+
+function renderServicesAdmin(){
+  const list = document.getElementById('servicesAdminList');
+  list.innerHTML = settings.services.map(s=>`
+    <div class="item-row">
+      <div class="meta"><strong>${s.title}</strong><span>${fmt(s.price)} ل.س.ق</span></div>
+      <button class="del-btn" data-del-service="${s.id}">حذف</button>
+    </div>`).join('');
+  list.querySelectorAll('[data-del-service]').forEach(btn=>{
+    btn.addEventListener('click', async ()=>{
+      settings.services = settings.services.filter(s=>s.id!==btn.dataset.delService);
+      await saveSettings(); renderServicesAdmin(); renderServices(); toast('تم الحذف');
+    });
+  });
+}
+document.getElementById('addServiceBtn').addEventListener('click', async ()=>{
+  const title = document.getElementById('newServiceTitle').value.trim();
+  const price = Number(document.getElementById('newServicePrice').value);
+  if(!title || !price){ toast('عبّي الاسم والسعر'); return; }
+  settings.services.push({id:'s'+Date.now(), title, price});
+  await saveSettings();
+  document.getElementById('newServiceTitle').value=''; document.getElementById('newServicePrice').value='';
+  renderServicesAdmin(); renderServices(); toast('تمت الإضافة ✦');
+});
+
+function renderPackagesAdmin(){
+  const list = document.getElementById('packagesAdminList');
+  list.innerHTML = settings.packages.map(p=>`
+    <div class="item-row">
+      <div class="meta"><strong>${p.title} ${p.badge?'⭐':''}</strong><span>${fmt(p.price)} ل.س.ق</span></div>
+      <button class="del-btn" data-del-pkg="${p.id}">حذف</button>
+    </div>`).join('');
+  list.querySelectorAll('[data-del-pkg]').forEach(btn=>{
+    btn.addEventListener('click', async ()=>{
+      settings.packages = settings.packages.filter(p=>p.id!==btn.dataset.delPkg);
+      await saveSettings(); renderPackagesAdmin(); renderPackages(); toast('تم الحذف');
+    });
+  });
+}
+document.getElementById('addPkgBtn').addEventListener('click', async ()=>{
+  const title = document.getElementById('newPkgTitle').value.trim();
+  const price = Number(document.getElementById('newPkgPrice').value);
+  const badge = document.getElementById('newPkgBadge').value === '1';
+  const features = document.getElementById('newPkgFeatures').value.split('\n').map(f=>f.trim()).filter(Boolean);
+  if(!title || !price || !features.length){ toast('عبّي كل الحقول'); return; }
+  if(badge) settings.packages.forEach(p=>p.badge=false);
+  settings.packages.push({id:'p'+Date.now(), title, price, badge, features});
+  await saveSettings();
+  document.getElementById('newPkgTitle').value=''; document.getElementById('newPkgPrice').value=''; document.getElementById('newPkgFeatures').value='';
+  renderPackagesAdmin(); renderPackages(); toast('تمت الإضافة ✦');
+});
+
+function renderRentalsAdmin(){
+  const list = document.getElementById('rentalsAdminList');
+  const rentals = settings.rentals || [];
+  list.innerHTML = rentals.map(r=>`
+    <div class="item-row">
+      <div class="meta"><strong>${r.icon||''} ${r.title}</strong><span>${fmt(r.price)} ل.س.ق</span></div>
+      <button class="del-btn" data-del-rental="${r.id}">حذف</button>
+    </div>`).join('');
+  list.querySelectorAll('[data-del-rental]').forEach(btn=>{
+    btn.addEventListener('click', async ()=>{
+      settings.rentals = settings.rentals.filter(r=>r.id!==btn.dataset.delRental);
+      await saveSettings(); renderRentalsAdmin(); renderRentals(); toast('تم الحذف');
+    });
+  });
+}
+document.getElementById('addRentalBtn').addEventListener('click', async ()=>{
+  const title = document.getElementById('newRentalTitle').value.trim();
+  const icon = document.getElementById('newRentalIcon').value.trim() || '🕶️';
+  const price = Number(document.getElementById('newRentalPrice').value);
+  const desc = document.getElementById('newRentalDesc').value.trim();
+  if(!title || !price){ toast('عبّي الاسم والسعر'); return; }
+  if(!settings.rentals) settings.rentals = [];
+  settings.rentals.push({id:'r'+Date.now(), title, icon, price, desc});
+  await saveSettings();
+  document.getElementById('newRentalTitle').value=''; document.getElementById('newRentalIcon').value=''; document.getElementById('newRentalPrice').value=''; document.getElementById('newRentalDesc').value='';
+  renderRentalsAdmin(); renderRentals(); toast('تمت الإضافة ✦');
+});
+
+document.getElementById('addItemBtn').addEventListener('click', async ()=>{
+  const title = document.getElementById('itemTitle').value.trim();
+  const category = document.getElementById('itemCategory').value.trim();
+  const type = document.getElementById('itemType').value;
+  const file = document.getElementById('itemFile').files[0];
+  if(!title || !category || !file){ toast('عبّي كل الحقول واختر ملف'); return; }
+  const btn = document.getElementById('addItemBtn'); const orig = btn.textContent;
+  const bucket = type==='video' ? CONFIG.bucketVideos : CONFIG.bucketPhotos;
+  try{
+    btn.innerHTML = '<span class="spinner"></span> جاري الرفع...'; btn.disabled = true;
+    document.getElementById('uploadProgress').textContent = 'عم يرفع الملف، لا تسكر الصفحة...';
+    const path = `${Date.now()}_${file.name.replace(/\s+/g,'_')}`;
+    const { error: upErr } = await sb.storage.from(bucket).upload(path, file);
+    if(upErr) throw upErr;
+    const { data: pub } = sb.storage.from(bucket).getPublicUrl(path);
+    const { error: insErr } = await sb.from('portfolio').insert({ title, category, type, media_url: pub.publicUrl, thumb_url: null });
+    if(insErr) throw insErr;
+    document.getElementById('itemTitle').value=''; document.getElementById('itemCategory').value=''; document.getElementById('itemFile').value='';
+    document.getElementById('uploadProgress').textContent = '';
+    await loadPortfolio(); renderManageList();
+    toast('تمت الإضافة إلى المعرض ✦');
+  }catch(e){ toast('تعذّر الرفع — تحقق من الاتصال'); console.error(e); document.getElementById('uploadProgress').textContent=''; }
+  finally{ btn.textContent = orig; btn.disabled = false; }
+});
+function renderManageList(){
+  const list = document.getElementById('manageList');
+  if(!portfolio.length){ list.innerHTML = '<p class="hint">ما في عناصر بعد.</p>'; return; }
+  list.innerHTML = portfolio.map(it=>`
+    <div class="item-row">
+      <div class="meta"><strong>${it.title}</strong><span>${it.category} · ${it.type==='video'?'فيديو':'صورة'}</span></div>
+      <button class="del-btn" data-del-item="${it.id}">حذف</button>
+    </div>`).join('');
+  list.querySelectorAll('[data-del-item]').forEach(btn=>{
+    btn.addEventListener('click', async ()=>{
+      try{ await sb.from('portfolio').delete().eq('id', btn.dataset.delItem); await loadPortfolio(); renderManageList(); toast('تم الحذف'); }
+      catch(e){ toast('تعذّر الحذف'); }
+    });
+  });
+}
+
+/* ORDERS admin */
+async function loadOrders(){
+  try{
+    const { data } = await sb.from('orders').select('*').order('created_at',{ascending:false});
+    orders = data || [];
+  }catch(e){ orders = []; }
+  renderOrders();
+}
+function renderOrders(){
+  const list = document.getElementById('ordersList');
+  if(!orders.length){ list.innerHTML = '<p class="hint">ما في طلبات بعد.</p>'; return; }
+  const statusLabel = {pending:'قيد الانتظار', confirmed:'مقبول', rejected:'مرفوض'};
+  list.innerHTML = orders.map(o=>`
+    <div class="order-card">
+      <div class="oh">
+        <h4>${o.package_name}</h4>
+        <span class="status-pill status-${o.status}">${statusLabel[o.status]||o.status}</span>
+      </div>
+      <div class="od">
+        👤 ${o.customer_name||'—'} · 📞 ${o.customer_phone||'—'}<br>
+        💰 ${fmt(o.price_syp_new||0)} ل.س.ج${o.price_usd?' · $'+o.price_usd:''}<br>
+        💳 ${o.payment_method}${o.transfer_ref?' · مرجع: '+o.transfer_ref:''}
+      </div>
+      ${o.receipt_url?`<a class="receipt-link" href="${o.receipt_url}" target="_blank" rel="noopener">عرض صورة الإشعار ↗</a>`:''}
+      <div class="status-actions">
+        <button data-status="pending" data-id="${o.id}" class="${o.status==='pending'?'active':''}">قيد الانتظار</button>
+        <button data-status="confirmed" data-id="${o.id}" class="${o.status==='confirmed'?'active':''}">مقبول</button>
+        <button data-status="rejected" data-id="${o.id}" class="${o.status==='rejected'?'active':''}">مرفوض</button>
+      </div>
+      ${o.customer_phone?`<a class="receipt-link" href="${waNotifyLink(o)}" target="_blank" rel="noopener" style="display:block; margin-top:10px;">📲 إرسال إشعار للزبون عبر واتساب</a>`:''}
+    </div>`).join('');
+  list.querySelectorAll('[data-status]').forEach(btn=>{
+    btn.addEventListener('click', async ()=>{
+      try{
+        await sb.from('orders').update({status: btn.dataset.status}).eq('id', btn.dataset.id);
+        await loadOrders(); toast('تم تحديث حالة الطلب');
+        const updated = orders.find(o=>o.id===btn.dataset.id);
+        if(updated && updated.customer_phone && btn.dataset.status!=='pending'){
+          window.open(waNotifyLink(updated), '_blank');
+        }
+      }catch(e){ toast('تعذّر التحديث'); }
+    });
+  });
+}
+function waNotifyLink(o){
+  const statusMsg = {
+    pending: `مرحبا ${o.customer_name||''}، طلبك (${o.package_name}) قيد المراجعة وبنأكد معك قريبًا 🙏`,
+    confirmed: `مرحبا ${o.customer_name||''} ✅ تم قبول وتأكيد طلبك (${o.package_name}) عند BKKARI POV. رح نتواصل معك لتنسيق الموعد. شكرًا لثقتك 🙏`,
+    rejected: `مرحبا ${o.customer_name||''}، للأسف تعذّر تأكيد طلبك (${o.package_name}) حاليًا. تواصل معنا لمعرفة التفاصيل أو لإعادة الحجز 🙏`
+  };
+  return `https://wa.me/${(o.customer_phone||'').replace(/[^0-9]/g,'')}?text=${encodeURIComponent(statusMsg[o.status]||statusMsg.pending)}`;
+}
+
+/* ================= HERO VIDEO FALLBACK ================= */
+const heroVideo = document.getElementById('heroVideo');
+heroVideo.addEventListener('error', ()=>{ heroVideo.style.display='none'; }, true);
+setTimeout(()=>{ if(heroVideo.readyState===0){ heroVideo.style.display='none'; } }, 4000);
+
+/* ================= INIT ================= */
+document.addEventListener('DOMContentLoaded', async ()=>{
+  spawnParticles(); observeReveals(); observeHorizons();
+  await fetchRate();
+  await loadSettings();
+  renderBrandAndContact(); renderServices(); renderRentals(); renderPackages();
+  await loadPortfolio();
+});
+</script>
+</body>
+</html>
